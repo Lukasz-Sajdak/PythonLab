@@ -3,9 +3,11 @@ import matplotlib.pyplot as plt
 import multiprocessing
 import random
 
+
 # Funkcja sortująca przekazany fragment danych
 def sort_chunk(chunk):
     return sorted(chunk)
+
 
 # Sortowanie równoległe
 def parallel_sort(data, num_processes):
@@ -20,6 +22,7 @@ def parallel_sort(data, num_processes):
     # Scalanie i końcowe sortowanie danych
     merged_data = [item for chunk in sorted_chunks for item in chunk]
     return sorted(merged_data)
+
 
 # Funkcja testująca sortowanie równoległe
 def run_sort_tests():
@@ -38,6 +41,7 @@ def run_sort_tests():
 
     return results
 
+
 # Wizualizacja wyników testów
 def plot_results(results, test_sizes, process_counts):
     plt.figure()
@@ -49,6 +53,7 @@ def plot_results(results, test_sizes, process_counts):
     plt.legend()
     plt.grid(True)
     plt.show()
+
 
 if __name__ == "__main__":
     test_results = run_sort_tests()

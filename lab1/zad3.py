@@ -3,7 +3,8 @@ import random
 numbers = [random.randint(1, 100) for _ in range(10)]
 print(f"Liczby przed sortowaniem: {numbers}")
 
-#metoda 1:
+
+# metoda 1:
 def selection_sort(arr):
     for i in range(len(arr)):
         min_idx = i
@@ -13,7 +14,8 @@ def selection_sort(arr):
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
     return arr
 
-#metoda 2:
+
+# metoda 2:
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -21,6 +23,7 @@ def bubble_sort(arr):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
+
 
 bubble = bubble_sort(numbers.copy())
 print(f"Bubble Sort: {bubble}")

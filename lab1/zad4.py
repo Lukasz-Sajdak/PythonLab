@@ -1,5 +1,6 @@
 import unittest
 
+
 class TreeNode:
     def __init__(self, value=None):
         self.value = value
@@ -41,6 +42,7 @@ class Tree:
         """Zwraca wizualną reprezentację drzewa."""
         return str(self.root)
 
+
 class TestTree(unittest.TestCase):
     def test_tree_creation(self):
         tree = Tree("Root")
@@ -73,6 +75,7 @@ class TestTree(unittest.TestCase):
         self.assertIn("Node(Root)", str(tree))
         self.assertIn("edge_to_A", str(tree))
         self.assertIn("Node(A)", str(tree))
+
 
 if __name__ == "__main__":
     unittest.main()
